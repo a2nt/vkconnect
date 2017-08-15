@@ -1,0 +1,1 @@
+<div class="fb-login-button" scope="$Top.VkPermissions">Login with Facebook</div>

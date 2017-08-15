@@ -1,0 +1,19 @@
+{
+    "name": "a2nt/silverstripe-vkconnect",
+    "description": "Integration of VK Connect into SilverStripe",
+    "keywords": ["vk", "silverstripe"],
+    "type": "silverstripe-module",
+    "homepage": "https://github.com/a2nt/silverstripe-vkconnect",
+    "license": "BSD-3-Clause",
+    "authors": [{
+        "name": "Anton Fedianin",
+        "email": "tony@twma.pro"
+    }],
+    "require": {
+        "silverstripe/framework": "4.*",
+        "getjump/vk": "master"
+    },
+    "extra": {
+        "installer-name": "vkconnect"
+    }
+}
