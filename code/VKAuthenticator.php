@@ -1,16 +1,9 @@
 <?php
 
-namespace A2nt\VkConnect;
-
-use SilverStripe\Forms\Form;
-use SilverStripe\Security\Member;
-use SilverStripe\Control\Controller;
-use SilverStripe\Security\MemberAuthenticator\MemberAuthenticator;
-
 /**
  * VK Connect Authenicator. Provides a tab in {@link Security::login()}.
  */
-class VKAuthenticator extends MemberAuthenticator
+class VKAuthenticator extends Authenticator
 {
     /**
      * Authentication is handled by VK rather than us this needs to
@@ -19,10 +12,10 @@ class VKAuthenticator extends MemberAuthenticator
      *
      * @return false|Member
      */
-    /*public function authenticate(array $data, HTTPRequest $request, ValidationResult &$result = null)
+    public static function authenticate($RAW_data, Form $form = null)
     {
         return ($member = Member::currentMember()) ? $member : false;
-    }*/
+    }
 
     /**
      * Return the VK login form.
@@ -31,7 +24,7 @@ class VKAuthenticator extends MemberAuthenticator
      */
     public static function get_login_form(Controller $controller)
     {
-        return VKLoginForm::create($controller, 'VKLoginForm');
+        return Object::create('VKLoginForm', $controller, 'VKLoginForm');
     }
 
     /**

@@ -1,12 +1,5 @@
 <?php
 
-use SilverStripe\Core\Config\Config;
-use SilverStripe\Security\Member;
-use SilverStripe\Core\Injector\Injector;
-use SilverStripe\Control\Director;
-use SilverStripe\Control\Controller;
-use SilverStripe\Core\Extension;
-
 /**
  * Main controller class to handle VK Connect implementations. Extends the
  * built in SilverStripe controller to add addition template functionality.
@@ -107,7 +100,7 @@ class VKControllerExtension extends Extension
                     }
 
                     if (!$member) {
-                        $member = Injector::inst()->create(Member::class);
+                        $member = Injector::inst()->create('Member');
                     }
 
                     $user->VKAccessToken = $accessToken->token;

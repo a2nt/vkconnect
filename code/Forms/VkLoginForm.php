@@ -1,13 +1,5 @@
 <?php
 
-use SilverStripe\Security\Member;
-use SilverStripe\Forms\HiddenField;
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\FormAction;
-use SilverStripe\Forms\LiteralField;
-use SilverStripe\Control\Session;
-use SilverStripe\Security\MemberAuthenticator\MemberLoginForm;
-
 /**
  * Return a Vk Login Form for the website.
  */

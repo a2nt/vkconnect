@@ -1,10 +1,5 @@
 <?php
 
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Control\Email\Email;
-use SilverStripe\Core\Config\Config;
-use SilverStripe\ORM\DataExtension;
-
 /**
  * VK member class to wrap the member functionality of the VK
  * members into the member object.

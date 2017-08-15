@@ -1,15 +1,15 @@
 ---
 name: VKconnect
 ---
-SilverStripe\Security\Member:
+Member:
   extensions:
     - VKMemberExtension
-SilverStripe\Control\Controller:
+Controller:
   extensions:
     - VKControllerExtension
-#SilverStripe\Security\Security:
-#  authenticators:
-#    - VKAuthenticator
+Authenticator:
+  authenticators:
+    - VKAuthenticator
 VKControllerExtension:
   sync_member_details: true
   create_member: false
@@ -19,6 +19,6 @@ VKControllerExtension:
     - timezone
     - first_name
     - last_name
-SilverStripe\Control\Director:
+Director:
   rules:
-    VKConnectAuthCallback//$Action/$ID/$OtherID: VKConnectAuthCallback
+    'VKConnectAuthCallback//$Action/$ID/$OtherID': 'VKConnectAuthCallback'
